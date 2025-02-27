@@ -113,6 +113,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Made with ❤️ by [UncoGeek]
+Made with ❤️ by UncoGeek
 
 *Transform the way you consume YouTube content - one summary at a time!*
