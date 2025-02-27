@@ -21,7 +21,11 @@ This powerful YouTube Summarizer application brings incredible flexibility to yo
 
 ## 📸 Screenshots
 
-![YouTube Summarizer Interface](/screenshot/youtube-summarizer-screenshot.png)
+
+<a href="/screenshot/youtube-summarizer-screenshot.png" target="_blank">
+  <img src="/screenshot/youtube-summarizer-screenshot.png" width="300" />
+</a>
+
 *The sleek, user-friendly interface makes generating summaries a breeze!*
 
 ## 🚀 How It Works
