@@ -137,6 +137,19 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+## 📁 Project Tree
+```
+📦
+├─ assets
+│  └─ app.js
+├─ api.php
+├─ config.php
+├─ favicon.png
+├─ index.php
+├─ openai.php
+├─ openrouter.php
+```
+
 Made with ❤️ by UncoGeek
 
 *Transform the way you consume YouTube content - one summary at a time!*
