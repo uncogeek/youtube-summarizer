@@ -128,6 +128,16 @@ I'd be thrilled to have your contributions! Here's how:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Project Checklist ✅
+
+### Core Features
+- [x] Implement configuration
+- [x] Revise the prompt to comply with AI model provider rules, resolving the "jalbreake" error
+
+### Documentation
+- [ ] Create Usage documentation
+- [ ] Add installation guide
+
 ## 🙏 Acknowledgments
 
 - Thanks to OpenAI and OpenRouter for their amazing AI APIs
