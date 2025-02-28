@@ -58,7 +58,7 @@ Alternatively, you can just clone the repository, modify `config.php`, and start
 
 To quickly get a summary of a YouTube video, follow these steps:
 
-1. Ensure that your application is running on a server as explained in the [Installation](#installation) section.
+1. Ensure that your application is running on a server as explained in the Installation section.
 2. Use the following URL pattern to obtain a summary for any YouTube video:
 
 ```
