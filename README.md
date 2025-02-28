@@ -132,7 +132,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Core Features
 - [x] Implement configuration
-- [x] Revise the prompt to comply with AI model provider rules, resolving the "jalbreake" error
+- [x] Revise the prompt to comply with AI model provider rules, resolving the "jailbreak" error
 
 ### Documentation
 - [ ] Create Usage documentation
