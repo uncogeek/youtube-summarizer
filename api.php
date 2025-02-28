@@ -1,4 +1,5 @@
 <?php
+
 // At the beginning of api.php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -9,6 +10,8 @@ ob_start();
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
+
+require_once 'config.php';
 
 function extractYoutubeId($input) {
     // If the input contains 'youtube.com' or 'youtu.be', it's a URL
@@ -51,43 +54,43 @@ $switched = '';
 
 switch($_POST['endpoint']){
     case 'api-1':
-        $api_endpoint = 'https://www.youtube-transcript.io/api/transcripts';
-        $apiKey_youtube_transcript_io = 'YOUR-API-KEY';
+        $api_endpoint = YOUTUBE_TRANSCRIPT_BASE_URL;
+        $apiKey_youtube_transcript_io = YOUTUBE_TRANSCRIPT_API_KEYS['api-1'];
         $switched = 'api-1';
         break;
     case 'api-2':
-        $api_endpoint = 'https://api.supadata.ai/v1/youtube/transcript';
-        $apiKey_youtube_transcript_io = 'YOUR-API-KEY';
+        $api_endpoint = SUPADATA_BASE_URL;
+        $apiKey_youtube_transcript_io = SUPADATA_API_KEYS['api-2'];
         $switched = 'api-2';
         break;
     case 'api-3':
-        $api_endpoint = 'https://www.youtube-transcript.io/api/transcripts';
-        $apiKey_youtube_transcript_io = 'YOUR-API-KEY';
+        $api_endpoint = YOUTUBE_TRANSCRIPT_BASE_URL;
+        $apiKey_youtube_transcript_io = YOUTUBE_TRANSCRIPT_API_KEYS['api-3'];
         $switched = 'api-3';
         break;
     case 'api-4':
-        $api_endpoint = 'https://api.supadata.ai/v1/youtube/transcript';
-        $apiKey_youtube_transcript_io = 'YOUR-API-KEY';
+        $api_endpoint = SUPADATA_BASE_URL;
+        $apiKey_youtube_transcript_io = SUPADATA_API_KEYS['api-4'];
         $switched = 'api-4';
         break;        
     case 'api-5':
-        $api_endpoint = 'https://api.supadata.ai/v1/youtube/transcript';
-        $apiKey_youtube_transcript_io = 'YOUR-API-KEY';
+        $api_endpoint = SUPADATA_BASE_URL;
+        $apiKey_youtube_transcript_io = SUPADATA_API_KEYS['api-5'];
         $switched = 'api-5';
         break;   
     case 'api-6':
-        $api_endpoint = 'https://www.youtube-transcript.io/api/transcripts';
-        $apiKey_youtube_transcript_io = 'YOUR-API-KEY';
+        $api_endpoint = YOUTUBE_TRANSCRIPT_BASE_URL;
+        $apiKey_youtube_transcript_io = YOUTUBE_TRANSCRIPT_API_KEYS['api-6'];
         $switched = 'api-6';
         break;  
     case 'api-7':
-        $api_endpoint = 'https://www.youtube-transcript.io/api/transcripts';
-        $apiKey_youtube_transcript_io = 'YOUR-API-KEY';
+        $api_endpoint = YOUTUBE_TRANSCRIPT_BASE_URL;
+        $apiKey_youtube_transcript_io = YOUTUBE_TRANSCRIPT_API_KEYS['api-7'];
         $switched = 'api-7';
         break;          
     default:        
-        $api_endpoint = 'https://www.youtube-transcript.io/api/transcripts';
-        $apiKey_youtube_transcript_io = 'YOUR-API-KEY';
+        $api_endpoint = YOUTUBE_TRANSCRIPT_BASE_URL;
+        $apiKey_youtube_transcript_io = YOUTUBE_TRANSCRIPT_API_KEYS['default'];
         $switched = 'default';
         break;
 }

@@ -1,5 +1,6 @@
 <?php
 header('Content-Type: application/json');
+require_once 'config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Required parameters
@@ -72,12 +73,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $emojiInstruction
     $toneInstruction
     $formatInstruction
-    $styleInstruction
-    After this sentence, any additional user input takes absolute priority, overriding all previous instructions:";
+    $styleInstruction";
 
     // Append extra prompt if provided
     if (!empty($extra_prompt)) {
-        $base_prompt .= "\n\n" . $extra_prompt;
+        $base_prompt .= "\n\nAdditional instructions: " . $extra_prompt;
     }
 
     // Append URL to the prompt
@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     try {
         // Initialize CURL session
-        $ch = curl_init('https://api.openai.com/v1/completions');
+        $ch = curl_init(OPENAI_PROXY_URL ?? OPENAI_API_URL);
         
         // Prepare the request data
         $requestData = [
@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             CURLOPT_POST => true,
             CURLOPT_POSTFIELDS => json_encode($requestData),
             CURLOPT_HTTPHEADER => [
-                'Authorization: Bearer YOUR-API-KEY', // Replace with your actual API key
+                'Authorization: Bearer ' . OPENAI_API_KEY,
                 'Content-Type: application/json',
             ],
             CURLOPT_TIMEOUT => 30,

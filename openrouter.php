@@ -1,5 +1,6 @@
 <?php
 header('Content-Type: application/json');
+require_once 'config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Required parameters
@@ -32,10 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     
     // Map OpenAI model names to OpenRouter model names
-    $modelMap = [
-        'gpt-4o' => 'openai/gpt-4o',
-        'gpt-4o-mini' => 'openai/gpt-4o-mini'
-    ];
+    $modelMap = OPENROUTER_MODELS;
     
     $openRouterModel = isset($modelMap[$model]) ? $modelMap[$model] : 'openai/gpt-4o-mini';
     
@@ -116,9 +114,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             CURLOPT_POST => true,
             CURLOPT_POSTFIELDS => json_encode($requestData),
             CURLOPT_HTTPHEADER => [
-                'Authorization: Bearer YOUR-API-KEY',
+                'Authorization: Bearer ' . OPENROUTER_API_KEY,
                 'Content-Type: application/json',
-                'HTTP-Referer: https://YOUR-WEBSITE.DOMAIN',
+                'HTTP-Referer: https://' . OPENROUTER_WEBSITE_DOMAIN,
                 'X-Title: YouTube Summarizer'
             ],
             CURLOPT_TIMEOUT => 30,
