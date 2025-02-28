@@ -1,9 +1,7 @@
 <?php
 /**
  * Global Configuration File
- * 
  * This file contains all API configurations and keys required for the application.
- * Please ensure all API keys are kept secure and not committed to version control.
  */
 
 /************************************
