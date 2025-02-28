@@ -52,8 +52,6 @@ php -S localhost:8000
 
 Alternatively, you can just clone the repository, modify `config.php`, and start using the application! 🚀
 
-Certainly! Here's a suggested section to add to your GitHub README:
-
 ---
 
 ## 🌐 Inline URL Usage
