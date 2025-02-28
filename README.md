@@ -50,6 +50,32 @@ cd youtube-summarizer
 php -S localhost:8000
 ```
 
+Alternatively, you can just clone the repository, modify `config.php`, and start using the application! 🚀
+
+Certainly! Here's a suggested section to add to your GitHub README:
+
+---
+
+## 🌐 Inline URL Usage
+
+To quickly get a summary of a YouTube video, follow these steps:
+
+1. Ensure that your application is running on a server as explained in the [Installation](#installation) section.
+2. Use the following URL pattern to obtain a summary for any YouTube video:
+
+```
+https://your-hosted-repo.domain/?url=https://www.youtube.com/watch?v=VIDEO_ID
+```
+
+- Replace `your-hosted-repo.domain` with the actual domain where your app is hosted.
+- Substitute `VIDEO_ID` with the unique identifier of the YouTube video you want to summarize, like in this example:
+
+```
+https://your-hosted-repo.domain/?url=https://www.youtube.com/watch?v=NikAa447TQE
+```
+
+Simply enter the above URL in your browser to view the video summary. Enjoy quick insights with ease! 📹✍️
+
 
 ## 🔑 API Keys
 
@@ -58,7 +84,7 @@ To use this application, you'll need:
 1. An API key from a YouTube transcript service (youtube-transcript.io or supadata.ai)
 2. An OpenAI API key or OpenRouter API key
 
-Add your API keys to the respective PHP files before using. (Edit api.php, openai.php, and openrouter.php to replace your API keys.)
+Add your API keys to the respective PHP files before using. (Edit config.php to replace your API keys.)
 
 ## 📋 Requirements
 
